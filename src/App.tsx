@@ -4,7 +4,9 @@
 import './App.css';
 
 function App() {
-    return <div className="bg-gradient-to-r from-indigo-500 h-screen w-screen"></div>;
+    return (
+        <div className="h-screen w-screen bg-white bg-gradient-to-t from-[#15A09166] via-[#15A09166] to-white"></div>
+    );
 }
 
 export default App;
