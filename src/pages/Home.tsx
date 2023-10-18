@@ -6,14 +6,20 @@ const Home = () => {
       <Header />
       <div>
         <div>로고</div>
-        <div>레티의 구독 서비스</div>
-        <div>레티가 구독하고 싶은 사람에게 보내줘요</div>
+        <div className="text-primary-dark">레티의 구독 서비스</div>
+        <div className="text-primary-default">
+          레티가 구독하고 싶은 사람에게 보내줘요
+        </div>
       </div>
       <div>
-        <div>___ 님이 ___님의 포스팅을 구독합니다.</div>
+        <div className="text-primary-default">
+          ___ 님이 ___님의 포스팅을 구독합니다.
+        </div>
         <div>
           <input placeholder="Email Address" />
-          <button type="submit">subscribe</button>
+          <button type="submit" className="bg-primary-default">
+            subscribe
+          </button>
         </div>
       </div>
     </div>
