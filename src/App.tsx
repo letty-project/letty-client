@@ -1,6 +1,7 @@
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Mailing from './pages/Mailing';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           <Route path="login" element={<Login />} />
           {/* 추후에 아래에 <Login /> 대신 <Signup /> 추가 */}
           <Route path="signup" element={<Login />} />
+          <Route path="mailing" element={<Mailing />} />
         </Route>
       </Routes>
     </BrowserRouter>
