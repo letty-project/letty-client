@@ -1,4 +1,5 @@
-import DottedLine from '../assets/airplane-with-dotted-line.svg';
+import DottedLine from 'src/assets/airplane-with-dotted-line.svg';
+
 const Home = () => {
   return (
     <>
@@ -47,11 +48,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <img
-        className="fixed left-1/5 bottom-[-50px]"
-        src={DottedLine}
-        alt="Dotted Line"
-      />
+      <img className="fixed left-1/5 bottom-[-50px]" src={DottedLine} alt="Dotted Line" />
     </>
   );
 };
