@@ -1,10 +1,10 @@
-import Quill from 'quill';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 const Mailing = () => {
-  const editor = new Quill('.editor');
   return (
     <div>
-      <h1>Mailing</h1>
+      <ReactQuill className="bg-white" theme="snow" />
     </div>
   );
 };
