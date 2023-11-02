@@ -4,7 +4,7 @@ import Logo from "../assets/letty-icon.svg";
 const Header = () => {
   return (
     // <header className="h-28 w-screen fixed top-0"> 람쥐
-    <header className="fixed top-0 left-0 w-screen p-5">
+    <header className="w-screen h-24">
       <div className="flex flex-row justify-between">
         <Link to="/">
           <div>
