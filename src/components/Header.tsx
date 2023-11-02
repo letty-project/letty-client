@@ -1,4 +1,4 @@
-import Logo from '../assets/letty-icon.svg';
+import Logo from "../assets/letty-icon.svg";
 
 export const Header = () => {
   return (
