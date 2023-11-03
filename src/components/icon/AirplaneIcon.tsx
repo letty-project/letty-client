@@ -1,11 +1,17 @@
-const AirplaneIcon = ({ width, height, fill }) => {
+type Props = {
+  width: string;
+  height: string;
+  fill: string;
+};
+
+const AirplaneIcon = ({ width, height, fill }: Props) => {
   return (
     <>
       <svg
-        width="76"
-        height="59"
+        width={width}
+        height={height}
         viewBox="0 0 76 59"
-        fill="none"
+        fill={fill}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
