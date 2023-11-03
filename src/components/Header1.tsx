@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import Logo from "../assets/letty-icon.svg";
+import { Link } from 'react-router-dom';
+import Logo from '../assets/letty-icon.svg';
 
 const Header = () => {
   return (

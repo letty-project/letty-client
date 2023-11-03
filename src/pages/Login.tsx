@@ -1,5 +1,5 @@
-import { Card } from "../components/Card";
-import DottedLine from "../assets/dotted-line.svg";
+import { Card } from '../components/Card';
+import DottedLine from '../assets/dotted-line.svg';
 
 function Login() {
   return (

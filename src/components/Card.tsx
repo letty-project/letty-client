@@ -1,5 +1,5 @@
-import Logo from "../assets/letty-icon.svg";
-import GoogleIcon from "../assets/google-icon.svg";
+import Logo from '../assets/letty-icon.svg';
+import GoogleIcon from '../assets/google-icon.svg';
 
 export const Card = () => {
   return (

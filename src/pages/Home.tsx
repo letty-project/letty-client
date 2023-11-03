@@ -1,4 +1,4 @@
-import DottedLine from "../assets/airplane-with-dotted-line.svg";
+import DottedLine from '../assets/airplane-with-dotted-line.svg';
 const Home = () => {
   return (
     <>
