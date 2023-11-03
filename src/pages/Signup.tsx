@@ -76,7 +76,7 @@ function Signup() {
             />
             <button
               className="btn border-[#15A091] border-[1px] bg-white my-[10px] text-black font-semibold text-base w-1/3 ml-3"
-              onClick={() => handleButtonClick('success')}
+              onClick={() => navigate(-1)}
             >
               이전
             </button>
