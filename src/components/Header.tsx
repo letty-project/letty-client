@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../assets/letty-icon.svg';
 
 export const Header = () => {
-  const [showLoginButton, setShowLoginButton] = useState(true);
+  const location = useLocation().pathname;
 
   return (
     <header className="h-28 w-screen fixed top-0">
@@ -14,12 +13,9 @@ export const Header = () => {
           alt="Letty Logo"
         />
       </Link>
-      {showLoginButton && (
+      {location === '/' && (
         <Link to="/login">
-          <button
-            onClick={() => setShowLoginButton(!showLoginButton)}
-            className="btn w-32 text-sm text-white bg-primary-default"
-          >
+          <button className="btn w-32 text-sm text-white bg-primary-default">
             Login
           </button>
         </Link>
