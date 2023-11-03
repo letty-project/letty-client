@@ -1,12 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import Logo from '../assets/letty-icon.svg';
 
-type Props = {
-  showLoginButton: boolean;
-  setShowLoginButton: (showLoginButton: boolean) => void;
-};
+export const Header = () => {
+  const [showLoginButton, setShowLoginButton] = useState(true);
 
-export const Header = ({ showLoginButton, setShowLoginButton }: Props) => {
   return (
     <header className="h-28 w-screen fixed top-0">
       <Link to="/">
