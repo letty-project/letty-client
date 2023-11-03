@@ -10,5 +10,15 @@ export default {
       },
     },
   },
+  daisyui: {
+    themes: [
+      {
+        letty: {
+          primary: '#15a091',
+          'base-100': '#ffffff',
+        },
+      },
+    ],
+  },
   plugins: [require('daisyui')],
 };
