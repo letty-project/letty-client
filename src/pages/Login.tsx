@@ -48,7 +48,7 @@ function Login() {
           <span className="label-text ml-[10px] text-base text-black font-normal">
             레티가 처음이신가요?
           </span>
-          <Link to="/signup">
+          <Link to="/signup/terms">
             <span className="label-text ml-[10px] text-base text-[#15A091] font-semibold">
               가입하기
             </span>
