@@ -8,7 +8,7 @@ import AirplaneIcon from '../components/icon/AirplaneIcon';
 const Mailing = () => {
   return (
     <div className="flex flex-row h-full w-screen bg-white">
-      <div className="h-full flex flex-col px-5 w-1/6  border-r-2 pt-12">
+      <div className="h-full flex flex-col px-5 w-1/5  border-r-2 pt-12">
         <button className="text-[16px] btn  h-[65px] bg-[#15A091] my-[10px] border-0 text-white font-semibold text-base">
           <img className="" src={home} alt="home" />
           메인 페이지
@@ -35,10 +35,10 @@ const Mailing = () => {
             </div>
             <div className="flex flex-row justify-between pt-5">
               <input
-                className="w-3/4 rounded-2xl h-11 px-5"
+                className="w-full rounded-2xl h-11 px-5 mr-10"
                 placeholder="https://y-oz6.tistory.com/"
               />
-              <button className="btn bg-white text-primary-light  border-0  font-semibold text-base ">
+              <button className="btn w-[120px] bg-white text-primary-light  border-0  font-semibold text-base ">
                 완료
               </button>
             </div>
@@ -48,8 +48,13 @@ const Mailing = () => {
               <div className=" text-primary-default text-[34px] font-black mr-3 my-3">
                 메일쓰기
               </div>
-              <div>
-                <input id="send-all-button" type="checkbox" />
+              <div className="flex flex-row justify-center items-center">
+                <input
+                  id="send-all-button"
+                  type="checkbox"
+                  className="checkbox 
+                  rounded-md border-2 checkbox-primary mr-3"
+                />
                 <label htmlFor="send-all-button">전체 보내기</label>
               </div>
             </div>
