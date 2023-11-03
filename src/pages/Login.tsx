@@ -1,13 +1,12 @@
 import { Card } from '../components/Card';
+import { Link } from 'react-router-dom';
 import DottedLine from '../assets/dotted-line.svg';
-import Logo from '../assets/letty-icon.svg';
 import GoogleIcon from '../assets/google-icon.svg';
 
 function Login() {
   return (
     <>
       <Card>
-        <img className="w-[230px] h-[190px]" src={Logo} alt="Letty Logo" />
         <input
           type="text"
           placeholder="닉네임 또는 이메일"
@@ -49,9 +48,11 @@ function Login() {
           <span className="label-text ml-[10px] text-base text-black font-normal">
             레티가 처음이신가요?
           </span>
-          <span className="label-text ml-[10px] text-base text-[#15A091] font-semibold">
-            가입하기
-          </span>
+          <Link to="/signup">
+            <span className="label-text ml-[10px] text-base text-[#15A091] font-semibold">
+              가입하기
+            </span>
+          </Link>
         </div>
       </Card>
       <img className="fixed left-4 bottom-0" src={DottedLine} alt="Dotted Line" />
