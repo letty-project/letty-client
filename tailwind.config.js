@@ -7,11 +7,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-default": "#15a091",
-        "primary-dark": "#116057",
-        "primary-light": "#75c7be",
+        'primary-default': '#15a091',
+        'primary-dark': '#116057',
+        'primary-light': '#75c7be',
       },
     },
   },
-  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        letty: {
+          primary: '#15a091',
+          'base-100': '#ffffff',
+        },
+      },
+    ],
+  },
+  plugins: [require('daisyui')],
 };
