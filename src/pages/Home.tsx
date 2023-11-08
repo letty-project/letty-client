@@ -1,5 +1,8 @@
 import DottedLine from 'src/assets/airplane-with-dotted-line.svg';
 
+// 임시로 넣은 검색창
+import SearchBar from 'src/components/SearchBar';
+
 const Home = () => {
   return (
     <>
@@ -47,8 +50,14 @@ const Home = () => {
             </button>
           </div>
         </div>
+        <SearchBar />
       </div>
-      <img className="fixed left-1/5 bottom-[-50px]" src={DottedLine} alt="Dotted Line" />
+
+      <img
+        className="fixed left-1/5 bottom-[-50px]"
+        src={DottedLine}
+        alt="Dotted Line"
+      />
     </>
   );
 };
