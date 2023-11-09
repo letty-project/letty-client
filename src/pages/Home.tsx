@@ -1,5 +1,5 @@
 import DottedLine from 'src/assets/airplane-with-dotted-line.svg';
-
+import MailboxButton from 'src/components/MailboxButton';
 const Home = () => {
   return (
     <>
@@ -46,9 +46,14 @@ const Home = () => {
               subscribe
             </button>
           </div>
+          <MailboxButton />
         </div>
       </div>
-      <img className="fixed left-1/5 bottom-[-50px]" src={DottedLine} alt="Dotted Line" />
+      <img
+        className="fixed left-1/5 bottom-[-50px]"
+        src={DottedLine}
+        alt="Dotted Line"
+      />
     </>
   );
 };
