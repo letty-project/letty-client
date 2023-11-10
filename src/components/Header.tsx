@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../assets/letty.svg';
+import Logo from 'src/assets/letty.svg';
 
 export const Header = () => {
   const location = useLocation().pathname;

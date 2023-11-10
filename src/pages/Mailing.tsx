@@ -1,9 +1,9 @@
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import home from '../assets/home.svg';
-import person from '../assets/person.svg';
-import CheckIcon from '../components/icon/CheckIcon';
-import AirplaneIcon from '../components/icon/AirplaneIcon';
+import home from 'src/assets/home.svg';
+import person from 'src/assets/person.svg';
+import CheckIcon from 'src/components/icon/CheckIcon';
+import AirplaneIcon from 'src/components/icon/AirplaneIcon';
 
 const Mailing = () => {
   return (

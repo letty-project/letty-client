@@ -1,8 +1,8 @@
 import { Card } from '../components/Card';
 import { Link } from 'react-router-dom';
-import DottedLine from '../assets/dotted-line.svg';
+import DottedLine from 'src/assets/dotted-line.svg';
 import Logo from '../assets/letty-icon.svg';
-import GoogleIcon from '../assets/google-icon.svg';
+import GoogleIcon from 'src/assets/google-icon.svg';
 
 function Login() {
   return (
@@ -24,7 +24,11 @@ function Login() {
 
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center">
-            <input type="checkbox" checked={true} className="checkbox checkbox-accent" />
+            <input
+              type="checkbox"
+              checked={true}
+              className="checkbox checkbox-accent"
+            />
             <label className="label-text ml-[10px] text-base text-black font-normal">
               로그인 상태 유지하기
             </label>
@@ -33,7 +37,9 @@ function Login() {
             <span className="label-text text-base mr-[10px] font-semibold">
               이메일 찾기
             </span>
-            <span className="label-text text-base font-semibold">비밀번호 찾기</span>
+            <span className="label-text text-base font-semibold">
+              비밀번호 찾기
+            </span>
           </div>
         </div>
 
@@ -56,7 +62,11 @@ function Login() {
           </Link>
         </div>
       </Card>
-      <img className="fixed left-4 bottom-0" src={DottedLine} alt="Dotted Line" />
+      <img
+        className="fixed left-4 bottom-0"
+        src={DottedLine}
+        alt="Dotted Line"
+      />
     </>
   );
 }

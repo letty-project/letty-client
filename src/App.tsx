@@ -1,8 +1,8 @@
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Mailing from './pages/Mailing';
-import Signup from './pages/Signup';
+import Layout from 'src/components/Layout';
+import Home from 'src/pages/Home';
+import Login from 'src/pages/Login';
+import Mailing from 'src/pages/Mailing';
+import Signup from 'src/pages/Signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 function App() {

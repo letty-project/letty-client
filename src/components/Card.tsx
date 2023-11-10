@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Logo from '../assets/letty.svg';
+import Logo from 'src/assets/letty.svg';
 
 type CardProps = {
   children: ReactNode;
