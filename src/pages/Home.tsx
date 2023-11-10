@@ -48,7 +48,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <img className="fixed left-1/5 bottom-[-50px]" src={DottedLine} alt="Dotted Line" />
+      <img
+        className="fixed left-1/5 bottom-[-50px] -z-10"
+        src={DottedLine}
+        alt="Dotted Line"
+      />
     </>
   );
 };
