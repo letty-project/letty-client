@@ -1,17 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../assets/letty-icon.svg';
+import Logo from '../assets/letty.svg';
 
 export const Header = () => {
   const location = useLocation().pathname;
 
   return (
-    <header className="h-28 w-screen fixed top-0">
+    <header className="fixed top-0 h-24 w-screen flex justify-between items-center px-16">
       <Link to="/">
-        <img
-          className="fixed left-[125px] w-[150px] h-[125px]"
-          src={Logo}
-          alt="Letty Logo"
-        />
+        <img className="w-[120px]" src={Logo} alt="Letty Logo" />
       </Link>
       {location === '/' && (
         <Link to="/login">
