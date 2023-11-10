@@ -1,12 +1,23 @@
 import { Card } from '../components/Card';
 import { Link } from 'react-router-dom';
-import DottedLine from '../assets/dotted-line.svg';
-import Logo from '../assets/letty-icon.svg';
 import GoogleIcon from '../assets/google-icon.svg';
+
+// import { Post } from 'src/components/Post';
+import DottedLine from '../assets/dotted-line.svg';
 
 function Login() {
   return (
     <>
+      {/* <Post
+        thumbnail={
+          'https://dennymfg.com/cdn/shop/products/ckgrayHigh_600x.jpg?v=1619109728'
+        }
+        title={'멋진 개발자가 되는 법'}
+        author={'김철수'}
+        commentCount={4}
+        content={'멋진 개발자가 되는 법을 알려드립니다.'}
+        date={'6'}
+      /> */}
       <Card>
         <input
           type="text"
@@ -24,7 +35,11 @@ function Login() {
 
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center">
-            <input type="checkbox" checked={true} className="checkbox checkbox-accent" />
+            <input
+              type="checkbox"
+              checked={true}
+              className="checkbox checkbox-accent"
+            />
             <label className="label-text ml-[10px] text-base text-black font-normal">
               로그인 상태 유지하기
             </label>
@@ -33,30 +48,36 @@ function Login() {
             <span className="label-text text-base mr-[10px] font-semibold">
               이메일 찾기
             </span>
-            <span className="label-text text-base font-semibold">비밀번호 찾기</span>
+            <span className="label-text text-base font-semibold">
+              비밀번호 찾기
+            </span>
           </div>
         </div>
 
         <div className="divider font-[#AAA] font-bold">또는</div>
         <button className="btn bg-white w-full text-[#373737] flex justify-between">
           <img src={GoogleIcon} alt="google Icon" />
-          <span className="text-[#8C8C8C] font-semibold text-lg">
+          <button className="text-[#8C8C8C] font-semibold text-lg">
             구글 계정으로 로그인
-          </span>
+          </button>
           <div className="w-[43px]"></div>
         </button>
         <div className="mt-5">
-          <span className="label-text ml-[10px] text-base text-black font-normal">
+          <button className="label-text ml-[10px] text-base text-black font-normal">
             레티가 처음이신가요?
-          </span>
+          </button>
           <Link to="/signup/terms">
-            <span className="label-text ml-[10px] text-base text-[#15A091] font-semibold">
+            <button className="label-text ml-[10px] text-base text-[#15A091] font-semibold">
               가입하기
-            </span>
+            </button>
           </Link>
         </div>
       </Card>
-      <img className="fixed left-4 bottom-0" src={DottedLine} alt="Dotted Line" />
+      <img
+        className="fixed left-4 bottom-0"
+        src={DottedLine}
+        alt="Dotted Line"
+      />
     </>
   );
 }
