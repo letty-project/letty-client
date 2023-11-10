@@ -2,8 +2,8 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import home from '../assets/home.svg';
 import person from '../assets/person.svg';
-import CheckIcon from '../components/icon/CheckIcon';
-import AirplaneIcon from '../components/icon/AirplaneIcon';
+import Check from '../assets/check.svg';
+import Airplane from '../assets/airplane.svg';
 
 const Mailing = () => {
   return (
@@ -21,8 +21,10 @@ const Mailing = () => {
       <div className="flex justify-center items-center w-screen">
         <div className="flex flex-col h-full w-[1100px]">
           <div className="flex flex-row items-center">
-            <div className="font-black text-[30px]">양수빈 님 안녕하세요!</div>
-            <CheckIcon width="30px" height="30px" fill="#15A091" />
+            <div className="font-black text-[30px] mr-3">
+              양수빈 님 안녕하세요!
+            </div>
+            <img src={Check} alt="check" className="fill-default" />
           </div>
           <div className="rounded-lg flex flex-col w-full p-7 bg-primary-default border-0 h-1/4 my-5">
             <div className="flex flex-row">
@@ -30,7 +32,11 @@ const Mailing = () => {
                 현재 이 주소로 되어있어요.
               </div>
               <div className="flex flex-row justify-center items-center">
-                <AirplaneIcon width="30px" height="30px" fill="white" />
+                <img
+                  src={Airplane}
+                  alt="airplane"
+                  className="fill-white w-[40px]"
+                />
               </div>
             </div>
             <div className="flex flex-row justify-between pt-5">
