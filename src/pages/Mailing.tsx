@@ -7,7 +7,7 @@ import AirplaneIcon from '../components/icon/AirplaneIcon';
 
 const Mailing = () => {
   return (
-    <div className="flex flex-row h-full w-screen bg-white">
+    <div className="flex flex-row w-screen bg-white">
       <div className="h-full flex flex-col px-5 w-1/5  border-r-2 pt-12">
         <button className="text-[16px] btn  h-[65px] bg-[#15A091] my-[10px] border-0 text-white font-semibold text-base">
           <img className="" src={home} alt="home" />

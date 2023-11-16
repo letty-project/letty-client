@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Card } from '../components/Card';
+import Card from '../components/Card';
 import DottedLine from '../assets/dotted-line.svg';
 import { useNavigate, useParams } from 'react-router-dom';
 import SuccessIcon from '../assets/success-icon.svg';
 
-function Signup() {
+const Signup = () => {
   const { step } = useParams();
   const [isChecked, setIsChecked] = useState(true);
   const navigate = useNavigate();
@@ -311,6 +311,6 @@ function Signup() {
       />
     </>
   );
-}
+};
 
 export default Signup;

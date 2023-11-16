@@ -4,8 +4,8 @@ import Login from './pages/Login';
 import Mailing from './pages/Mailing';
 import Signup from './pages/Signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-function App() {
+import './App.css';
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -19,6 +19,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
