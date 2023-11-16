@@ -2,24 +2,13 @@ import { Card } from '../components/Card';
 import { Link } from 'react-router-dom';
 import GoogleIcon from '../assets/google-icon.svg';
 
-import { Mailing } from 'src/components/Mailing';
 // NOTE: DottedLine 이 여기에 있어도 되는건가? Layout에 있어야 하는거 아닌가?
-// import DottedLine from '../assets/dotted-line.svg';
+import DottedLine from '../assets/dotted-line.svg';
 
 function Login() {
   return (
     <>
-      <Mailing
-        thumbnail={
-          'https://img.freepik.com/premium-photo/gray-abstract-wall-display-product_36835-2777.jpg'
-        }
-        title={'멋진 개발자가 되는 법'}
-        author={'김철수'}
-        commentCount={4}
-        content={'열심히하면 개발자가 되실 수 있어요~'}
-        date={'6'}
-      />
-      {/* <Card>
+      <Card>
         <input
           type="text"
           placeholder="닉네임 또는 이메일"
@@ -78,7 +67,7 @@ function Login() {
         className="fixed left-4 bottom-0"
         src={DottedLine}
         alt="Dotted Line"
-      /> */}
+      />
     </>
   );
 }
