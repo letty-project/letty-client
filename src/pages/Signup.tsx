@@ -6,7 +6,7 @@ import SuccessIcon from '../assets/success-icon.svg';
 
 const Signup = () => {
   const { step } = useParams();
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
   const handleButtonClick = (params: string) => {
     navigate(`/signup/${params}`);
@@ -160,12 +160,16 @@ const Signup = () => {
             {<PrivacyPolicy />}
           </p>
         </div>
-        <label className="self-end">
+        <label className="self-end flex items-center">
           <span className="label-text text-base text-[#15A091] font-semibold mr-2">
             개인정보 수집 동의하기
           </span>
+
           <input
+            id="send-all-button"
             type="checkbox"
+            className="checkbox 
+                  rounded-md border-2 checkbox-primary mr-3"
             checked={isChecked}
             onChange={() => setIsChecked(!isChecked)}
           />

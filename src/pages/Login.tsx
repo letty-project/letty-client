@@ -4,8 +4,9 @@ import GoogleIcon from '../assets/google-icon.svg';
 
 // NOTE: DottedLine 이 여기에 있어도 되는건가? Layout에 있어야 하는거 아닌가?
 import DottedLine from '../assets/dotted-line.svg';
-
+import { useState } from 'react';
 function Login() {
+  const [isChecked, setIsChecked] = useState(false);
   return (
     <>
       <Card>
@@ -26,9 +27,12 @@ function Login() {
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center">
             <input
+              id="send-all-button"
               type="checkbox"
-              checked={true}
-              className="checkbox checkbox-accent"
+              className="checkbox 
+                  rounded-md border-2 checkbox-primary"
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
             />
             <label className="label-text ml-[10px] text-base text-black font-normal">
               로그인 상태 유지하기
