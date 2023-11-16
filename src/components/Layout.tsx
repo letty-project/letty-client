@@ -1,4 +1,4 @@
-import { Header } from './Header';
+import Header from './Header';
 import { Outlet, useLocation } from 'react-router-dom';
 
 const Layout = () => {

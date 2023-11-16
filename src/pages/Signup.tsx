@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card } from '../components/Card';
+import Card from '../components/Card';
 import DottedLine from '../assets/dotted-line.svg';
 import { useNavigate, useParams } from 'react-router-dom';
 import SuccessIcon from '../assets/success-icon.svg';
