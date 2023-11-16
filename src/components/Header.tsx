@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../assets/letty.svg';
 
-export const Header = () => {
+const Header = () => {
   const location = useLocation().pathname;
 
   return (
@@ -19,3 +19,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;
