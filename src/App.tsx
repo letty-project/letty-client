@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import Mailing from './pages/Mailing';
 import Signup from './pages/Signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+
 const App = () => {
   return (
     <BrowserRouter>
