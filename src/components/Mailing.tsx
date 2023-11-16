@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Modal from './Modal';
+import bookmark from 'src/assets/bookmark.svg';
 
 type Props = {
   thumbnail: string;
@@ -9,11 +10,11 @@ type Props = {
   //  이클립스로 트림하는 걸 여기서 구현?
   content: string;
   // 데이트 타입고민: 백엔드에서 스트링값으로 받아서 여기서 며칠전인지 계산하는건가?
-  // 그렇다면 맥시멈 넘버는 얼마? 7일전 
+  // 그렇다면 맥시멈 넘버는 얼마? 7일전
   date: string;
 };
 
-export const Post = ({
+export const Mailing = ({
   thumbnail,
   title,
   author,
@@ -32,14 +33,21 @@ export const Post = ({
         onClick={() => setOpenModal(true)}
       >
         {thumbnail && (
-          <img
-            className="h-48 w-full rounded-md"
-            src={thumbnail}
-            alt="Post thumbnail"
-          />
+          <>
+            <img
+              className="h-48 w-full rounded-md relative"
+              src={thumbnail}
+              alt="Post thumbnail"
+            />
+            <img
+              className="relative top-[-11.25rem] right-[-20.5rem]"
+              src={bookmark}
+              alt="Bookmark"
+            />
+          </>
         )}
         <div className="p-2">
-          <h4 className="text-[1.1em] font-bold text-black hover:underline">
+          <h4 className="text-[1.2rem] font-bold text-black hover:underline">
             {title}
           </h4>
           <p className="text-sm font-semibold">
@@ -64,6 +72,7 @@ export const Post = ({
         date={date}
         author={author}
         thumbnail={thumbnail}
+        setOpenModal={setOpenModal}
       />
     </>
   );
