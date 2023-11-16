@@ -181,7 +181,7 @@ function Signup() {
     );
   };
 
-  const SignupCredentialsComponent = () => {
+  const SignupCredentials = () => {
     return (
       <>
         <div className="form-control w-full">
@@ -259,7 +259,7 @@ function Signup() {
     );
   };
 
-  const SignupSuccessComponent = () => {
+  const SignupSuccess = () => {
     return (
       <>
         <div className="flex flex-col items-center -mt-32">
@@ -293,13 +293,17 @@ function Signup() {
     );
   };
 
+  const STEP_COMPONENTS = {
+    terms: SignupTerms,
+    credentials: SignupCredentials,
+    success: SignupSuccess,
+  };
+
+  const ActiveComponent = STEP_COMPONENTS[step as keyof typeof STEP_COMPONENTS];
+
   return (
     <>
-      <Card>
-        {step === 'terms' && <SignupTerms />}
-        {step === 'credentials' && <SignupCredentialsComponent />}
-        {step === 'success' && <SignupSuccessComponent />}
-      </Card>
+      <Card>{ActiveComponent()}</Card>
       <img
         className="fixed left-4 bottom-0"
         src={DottedLine}
