@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import DottedLine from '../assets/dotted-line.svg';
 import GoogleIcon from '../assets/google-icon.svg';
 
-function Login() {
+const Login = () => {
   return (
     <>
       <Card>
@@ -68,6 +68,6 @@ function Login() {
       />
     </>
   );
-}
+};
 
 export default Login;

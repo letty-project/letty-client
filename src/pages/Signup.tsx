@@ -4,7 +4,7 @@ import DottedLine from '../assets/dotted-line.svg';
 import { useNavigate, useParams } from 'react-router-dom';
 import SuccessIcon from '../assets/success-icon.svg';
 
-function Signup() {
+const Signup = () => {
   const { step } = useParams();
   const [isChecked, setIsChecked] = useState(true);
   const navigate = useNavigate();
@@ -20,10 +20,10 @@ function Signup() {
         </span>
         <div className="border-[#15A091] border-[1px] w-full rounded-[10px] overflow-y-scroll h-[250px] p-4 custom-scrollbar">
           <p className="h-[900px]">
-            여기에 이용약관 내용을 넣으세요... 여기에 이용약관 내용을 넣으세요...여기에
-            이용약관 내용을 넣으세요...여기에 이용약관 내용을 넣으세요...여기에 이용약관
-            내용을 넣으세요...여기에 이용약관 내용을 넣으세요...여기에 이용약관 내용을
-            넣으세요...
+            여기에 이용약관 내용을 넣으세요... 여기에 이용약관 내용을
+            넣으세요...여기에 이용약관 내용을 넣으세요...여기에 이용약관 내용을
+            넣으세요...여기에 이용약관 내용을 넣으세요...여기에 이용약관 내용을
+            넣으세요...여기에 이용약관 내용을 넣으세요...
           </p>
         </div>
         <label className="self-end">
@@ -129,7 +129,11 @@ function Signup() {
     return (
       <>
         <div className="flex flex-col items-center -mt-32">
-          <img src={SuccessIcon} className="h-[102px] w-[102px]" alt="Success Icon" />
+          <img
+            src={SuccessIcon}
+            className="h-[102px] w-[102px]"
+            alt="Success Icon"
+          />
           <h1 className="text-center text-[#15A091] font-bold text-4xl">
             회원가입이
             <br />
@@ -162,9 +166,13 @@ function Signup() {
         {step === 'credentials' && <SignupCredentialsComponent />}
         {step === 'success' && <SignupSuccessComponent />}
       </Card>
-      <img className="fixed left-4 bottom-0" src={DottedLine} alt="Dotted Line" />
+      <img
+        className="fixed left-4 bottom-0"
+        src={DottedLine}
+        alt="Dotted Line"
+      />
     </>
   );
-}
+};
 
 export default Signup;

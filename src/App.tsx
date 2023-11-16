@@ -5,7 +5,7 @@ import Mailing from './pages/Mailing';
 import Signup from './pages/Signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -19,6 +19,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
