@@ -6,10 +6,147 @@ import SuccessIcon from '../assets/success-icon.svg';
 
 const Signup = () => {
   const { step } = useParams();
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
   const handleButtonClick = (params: string) => {
     navigate(`/signup/${params}`);
+  };
+
+  const PrivacyPolicy = () => {
+    return (
+      <div className="font-sans text-xs  pb-4">
+        <p className="font-bold text-sm mb-4">개인정보처리방침</p>
+        <ol className="list-decimal ml-4">
+          <li>
+            <div>개인 정보의 수집 및 이용 목적</div>
+            <div>
+              서비스 제공자 Letty(이하 “레티”)는 다음과 같은 목적으로 사용자의
+              개인 정보를 수집 및 활용합니다.
+            </div>
+          </li>
+          <li>
+            <ul className="list-decimal pl-4">
+              <li>
+                회원관리 - 사용자의 식별 및 불량 회원의 부정 이용 방지와 비인가
+                사용방지, 가입의사 확인, 분쟁 조정을 위한 기록 보존, 불만 처리
+                등 민원처리, 공지사항 전달
+              </li>
+              <li>서비스 제공 - 신규 서비스 개발 및 마케팅 및 광고에 활용</li>
+            </ul>
+          </li>
+          <li>
+            <div>개인 정보의 보유 및 이용기간</div>
+            <ul className="list-decimal pl-4">
+              <li>
+                <div>사용자의 불만 및 분쟁</div>
+                <div>
+                  보존 이유: 전자상거래 등에서 소비자 보호에 관한 법률 제6조 및
+                  시행령 제 6조
+                </div>
+                <div>보존 기간: 3년</div>
+              </li>
+              <li>
+                <div>접속에 관한 기록</div>
+                <div>보존 이유: 통신비밀보호법 제15조 2항 및 시행령 제41조</div>
+                <div>보존 기간: 3개월</div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div>수집하는 개인 정보의 항목</div>
+            <ul className="list-decimal pl-4">
+              <li>사용자 입력 (회원 가입)</li>
+              <ul className="list-decimal pl-6">
+                <li>이메일 또는 소셜 미디어 서비스 ID: 사용자 구분</li>
+                <li>회원 유형</li>
+                <li>닉네임</li>
+                <li>프로필 사진</li>
+              </ul>
+              <li>자동 수집 항목 (홈페이지 접속)</li>
+              <ul className="list-decimal pl-6">
+                <li>IP</li>
+                <li>이용 기록</li>
+                <li>접속 기록</li>
+                <li>쿠키 등</li>
+              </ul>
+            </ul>
+          </li>
+          <li>
+            <div>개인 정보의 파기 절차</div>
+            <div>
+              사용자가 서비스 이용 거부(회원 탈퇴)시 레티는 7일 이내 사용자를
+              구분 할 수 있는 모든 데이터를 지체 없이 파기 합니다. 파기 절차가
+              진행되면서 사용자가 작성한 게시글, 댓글 및 북마크 등이 모두
+              삭제됩니다.
+            </div>
+            <div>
+              또한 서비스 운영자에게 이메일 (project@letty.day)에게 이메일을
+              사용하여 파기 요청을 할 수 있습니다. 회원의 개인정보는 수집 및
+              이용목적이 달성되거나 고지한 보유기간이 경과된 후 지체 없이
+              파기됩니다.
+            </div>
+            <div>
+              종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각 등을 통하여
+              파기하고, 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수
+              없는 기술적인 방법을 사용하여 파기합니다.
+            </div>
+          </li>
+          <li>
+            <div>개인정보 제공</div>
+            <ul className="list-decimal pl-4">
+              <li>
+                사용자가 대한민국 법령에 의거하거나 위배하는 행위를 하여 수사
+                목적으로 요구되는 경우
+              </li>
+              <li>사용자가 사전에 동의하는 경우</li>
+            </ul>
+          </li>
+          <li>
+            <div>개인 정보의 안정성 및 확보 조치</div>
+            <ul className="list-decimal pl-4">
+              <li>개인정보 암호화</li>
+              <li>취급자 최소화 및 교육</li>
+            </ul>
+          </li>
+          <li>
+            <div>개인 정보 관리 및 책임자</div>
+            <div>
+              이메일:{' '}
+              <a
+                href="mailto:project@letty.day"
+                className="text-blue-600 hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                project@letty.day
+              </a>
+            </div>
+            <div>
+              기타 개인 정보 침해에 대한 신고나 상담이 필요한 경우에는 아래
+              회사에 문의 하시길 바랍니다.
+            </div>
+            <div>
+              개인정보침해신고센터(
+              <a
+                href="https://www.118.or.kr"
+                className="text-blue-600 hover:text-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.118.or.kr
+              </a>{' '}
+              / 118)
+            </div>
+          </li>
+          <li>
+            <div>개인 정보 취급 방침에 따른 사항</div>
+            <div>
+              이 개인 정보 취급 방침은 2023년 12월 25일 부터 적용됩니다.
+            </div>
+          </li>
+        </ol>
+      </div>
+    );
   };
 
   const SignupTerms = () => {
@@ -19,19 +156,20 @@ const Signup = () => {
           [필수] 개인정보 수집 및 이용
         </span>
         <div className="border-[#15A091] border-[1px] w-full rounded-[10px] overflow-y-scroll h-[250px] p-4 custom-scrollbar">
-          <p className="h-[900px]">
-            여기에 이용약관 내용을 넣으세요... 여기에 이용약관 내용을
-            넣으세요...여기에 이용약관 내용을 넣으세요...여기에 이용약관 내용을
-            넣으세요...여기에 이용약관 내용을 넣으세요...여기에 이용약관 내용을
-            넣으세요...여기에 이용약관 내용을 넣으세요...
+          <p className="h-full  text-justify whitespace-pre-line">
+            {<PrivacyPolicy />}
           </p>
         </div>
-        <label className="self-end">
+        <label className="self-end flex items-center">
           <span className="label-text text-base text-[#15A091] font-semibold mr-2">
             개인정보 수집 동의하기
           </span>
+
           <input
+            id="send-all-button"
             type="checkbox"
+            className="checkbox 
+                  rounded-md border-2 checkbox-primary mr-3"
             checked={isChecked}
             onChange={() => setIsChecked(!isChecked)}
           />
@@ -47,7 +185,7 @@ const Signup = () => {
     );
   };
 
-  const SignupCredentialsComponent = () => {
+  const SignupCredentials = () => {
     return (
       <>
         <div className="form-control w-full">
@@ -125,7 +263,7 @@ const Signup = () => {
     );
   };
 
-  const SignupSuccessComponent = () => {
+  const SignupSuccess = () => {
     return (
       <>
         <div className="flex flex-col items-center -mt-32">
@@ -159,13 +297,17 @@ const Signup = () => {
     );
   };
 
+  const STEP_COMPONENTS = {
+    terms: SignupTerms,
+    credentials: SignupCredentials,
+    success: SignupSuccess,
+  };
+
+  const ActiveComponent = STEP_COMPONENTS[step as keyof typeof STEP_COMPONENTS];
+
   return (
     <>
-      <Card>
-        {step === 'terms' && <SignupTerms />}
-        {step === 'credentials' && <SignupCredentialsComponent />}
-        {step === 'success' && <SignupSuccessComponent />}
-      </Card>
+      <Card>{ActiveComponent()}</Card>
       <img
         className="fixed left-4 bottom-0"
         src={DottedLine}

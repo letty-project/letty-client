@@ -1,9 +1,12 @@
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
-import DottedLine from '../assets/dotted-line.svg';
 import GoogleIcon from '../assets/google-icon.svg';
 
-const Login = () => {
+// NOTE: DottedLine 이 여기에 있어도 되는건가? Layout에 있어야 하는거 아닌가?
+import DottedLine from '../assets/dotted-line.svg';
+import { useState } from 'react';
+function Login() {
+  const [isChecked, setIsChecked] = useState(false);
   return (
     <>
       <Card>
@@ -24,9 +27,12 @@ const Login = () => {
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center">
             <input
+              id="send-all-button"
               type="checkbox"
-              checked={true}
-              className="checkbox checkbox-accent"
+              className="checkbox 
+                  rounded-md border-2 checkbox-primary"
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
             />
             <label className="label-text ml-[10px] text-base text-black font-normal">
               로그인 상태 유지하기
@@ -45,19 +51,19 @@ const Login = () => {
         <div className="divider font-[#AAA] font-bold">또는</div>
         <button className="btn bg-white w-full text-[#373737] flex justify-between">
           <img src={GoogleIcon} alt="google Icon" />
-          <span className="text-[#8C8C8C] font-semibold text-lg">
+          <button className="text-[#8C8C8C] font-semibold text-lg">
             구글 계정으로 로그인
-          </span>
+          </button>
           <div className="w-[43px]"></div>
         </button>
         <div className="mt-5">
-          <span className="label-text ml-[10px] text-base text-black font-normal">
+          <button className="label-text ml-[10px] text-base text-black font-normal">
             레티가 처음이신가요?
-          </span>
+          </button>
           <Link to="/signup/terms">
-            <span className="label-text ml-[10px] text-base text-[#15A091] font-semibold">
+            <button className="label-text ml-[10px] text-base text-[#15A091] font-semibold">
               가입하기
-            </span>
+            </button>
           </Link>
         </div>
       </Card>
@@ -68,6 +74,6 @@ const Login = () => {
       />
     </>
   );
-};
+}
 
 export default Login;

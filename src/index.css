@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-scrollbar::-webkit-scrollbar {
+    @apply w-[12px]  border-[10px];
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-[#E0E0E0] rounded-full m-3;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-[#15A091] rounded-full;
+}
