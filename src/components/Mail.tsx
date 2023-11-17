@@ -14,7 +14,7 @@ type Props = {
   date: string;
 };
 
-export const Mailing = ({
+const Mail = ({
   thumbnail,
   title,
   author,
@@ -27,42 +27,41 @@ export const Mailing = ({
   return (
     <>
       <div
-        className={`bg-white w-96 rounded-md p-3 z-10 border-primary-default border-[1px] ${
+        className={`bg-white  max-h-[90%] max-w-[30%] rounded-md p-2 z-10 border-primary-default border-[1px] ${
           openModal ? 'hidden' : 'block'
         }`}
         onClick={() => setOpenModal(true)}
       >
         {thumbnail && (
-          <>
-            <img
-              className="h-48 w-full rounded-md relative"
-              src={thumbnail}
-              alt="Post thumbnail"
-            />
-            <img
-              className="relative top-[-11.25rem] right-[-20.5rem]"
-              src={bookmark}
-              alt="Bookmark"
-            />
-          </>
+          <img
+            className="h-36 w-full rounded-md relative"
+            src={thumbnail}
+            alt="Post thumbnail"
+          />
         )}
-        <div className="p-2">
-          <h4 className="text-[1.2rem] font-bold text-black hover:underline">
+        <div className="p-1">
+          <h4 className="text-[1rem] font-bold text-black hover:underline mt-3">
             {title}
           </h4>
-          <p className="text-sm font-semibold">
+          <p className="text-[0.7rem] font-semibold mb-3">
             <span className="text-primary-default">By </span>
             <span>{author}</span>
           </p>
-          <p className="my-2 text-[#5A5A5A]">
+          <p className="my-1 text-[#5A5A5A] text-[0.7rem]">
             {content}
             <button className="font-semibold">...더보기</button>
           </p>
 
-          <p className="text-[#5A5A5A] text-xs">
+          <p className="text-[#5A5A5A] text-[0.6rem]">
             {date}일전 &#183; 댓글 {commentCount}개 보기
           </p>
         </div>
+
+        <img
+          className="relative top-[-15rem] right-[-18rem]"
+          src={bookmark}
+          alt="Bookmark"
+        />
       </div>
       <Modal
         openModal={openModal}
@@ -77,3 +76,5 @@ export const Mailing = ({
     </>
   );
 };
+
+export default Mail;
